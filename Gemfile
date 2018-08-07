@@ -27,8 +27,8 @@ gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-google'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+
+
 
 
 # Use jquery as the JavaScript library

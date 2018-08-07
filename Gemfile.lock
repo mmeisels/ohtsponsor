@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/stripe/stripe-ruby
+  revision: 24143ab7d7a65f5b8e58f55c64c14200ead50720
+  specs:
+    stripe (3.21.0)
+      faraday (~> 0.10)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -55,6 +62,10 @@ GEM
     crass (1.0.4)
     erubi (1.7.1)
     execjs (2.7.0)
+    faraday (0.12.2)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.12.2)
+      faraday (>= 0.7.4, < 1.0)
     ffi (1.9.25)
     fullcalendar-rails (3.9.0.0)
       jquery-rails (>= 4.0.5, < 5.0.0)
@@ -62,6 +73,7 @@ GEM
       momentjs-rails (>= 2.9.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    hashie (3.5.7)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
@@ -73,6 +85,8 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
+    json (2.1.0)
+    jwt (1.5.6)
     loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -87,12 +101,46 @@ GEM
     minitest (5.11.3)
     momentjs-rails (2.20.1)
       railties (>= 3.1)
+    mono_logger (1.1.0)
     multi_json (1.13.1)
+    multi_xml (0.6.0)
+    multipart-post (2.0.0)
+    mustermann (1.0.2)
     nio4r (2.3.1)
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
+    oauth (0.5.4)
+    oauth2 (1.4.0)
+      faraday (>= 0.8, < 0.13)
+      jwt (~> 1.0)
+      multi_json (~> 1.3)
+      multi_xml (~> 0.5)
+      rack (>= 1.2, < 3)
+    omniauth (1.8.1)
+      hashie (>= 3.4.6, < 3.6.0)
+      rack (>= 1.6.2, < 3)
+    omniauth-facebook (5.0.0)
+      omniauth-oauth2 (~> 1.2)
+    omniauth-google (1.0.2)
+      multi_json
+      omniauth (~> 1.0)
+      omniauth-oauth
+    omniauth-oauth (1.1.0)
+      oauth
+      omniauth (~> 1.0)
+    omniauth-oauth2 (1.5.0)
+      oauth2 (~> 1.1)
+      omniauth (~> 1.2)
+    omniauth-salesforce (1.0.5)
+      omniauth (~> 1.0)
+      omniauth-oauth2 (~> 1.0)
+    omniauth-twitter (1.4.0)
+      omniauth-oauth (~> 1.1)
+      rack
     pg (0.21.0)
     rack (2.0.5)
+    rack-protection (2.0.3)
+      rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.0)
@@ -113,11 +161,6 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
-    rails_12factor (0.0.3)
-      rails_serve_static_assets
-      rails_stdout_logging
-    rails_serve_static_assets (0.0.5)
-    rails_stdout_logging (0.0.5)
     railties (5.2.0)
       actionpack (= 5.2.0)
       activesupport (= 5.2.0)
@@ -129,6 +172,20 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     rdoc (6.0.4)
+    redis (4.0.1)
+    redis-namespace (1.6.0)
+      redis (>= 3.0.4)
+    resque (1.27.4)
+      mono_logger (~> 1.0)
+      multi_json (~> 1.0)
+      redis-namespace (~> 1.3)
+      sinatra (>= 0.9.2)
+      vegas (~> 0.1.2)
+    restforce (3.0.1)
+      faraday (>= 0.9.0, <= 1.0)
+      faraday_middleware (>= 0.8.8, <= 1.0)
+      hashie (>= 1.2.0, < 4.0)
+      json (>= 1.7.5)
     sass (3.5.7)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -142,6 +199,18 @@ GEM
       tilt (>= 1.1, < 3)
     sdoc (1.0.0)
       rdoc (>= 5.0)
+    sinatra (2.0.3)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.3)
+      tilt (~> 2.0)
+    slim (3.0.9)
+      temple (>= 0.7.6, < 0.9)
+      tilt (>= 1.3.3, < 2.1)
+    slim-rails (3.1.3)
+      actionpack (>= 3.1)
+      railties (>= 3.1)
+      slim (~> 3.0)
     sprockets (3.7.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -150,6 +219,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.3.13)
+    temple (0.8.0)
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
@@ -160,6 +230,8 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.17)
       execjs (>= 0.3.0, < 3)
+    vegas (0.1.11)
+      rack (>= 1.0.0)
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
@@ -172,14 +244,26 @@ DEPENDENCIES
   fullcalendar-rails
   jbuilder
   jquery-rails
+  omniauth
+  omniauth-facebook
+  omniauth-google
+  omniauth-oauth2
+  omniauth-salesforce
+  omniauth-twitter
   pg (~> 0.20)
   rails
-  rails_12factor
+  resque
+  restforce
   sass-rails
   sdoc
+  slim-rails
   sqlite3
+  stripe!
   turbolinks
   uglifier
+
+RUBY VERSION
+   ruby 2.5.1p57
 
 BUNDLED WITH
    1.16.3
