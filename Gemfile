@@ -14,9 +14,22 @@ gem 'uglifier'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails'
+# Use SCSS for stylesheets
+gem 'resque'
+# Use Uglifier as compressor for JavaScript assetsgem 'uglifier'
 
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'restforce'
+gem 'omniauth-salesforce'
+gem 'slim-rails'
+gem 'omniauth'
+gem 'omniauth-oauth2'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-google'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+# Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails', '~> 4.0.0'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -40,7 +53,6 @@ end
 group :production do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'pg', '~> 0.20'
-  gem 'rails_12factor'
 end
 
 gem 'fullcalendar-rails'
