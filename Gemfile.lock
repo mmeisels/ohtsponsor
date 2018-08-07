@@ -168,7 +168,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  coffee-rails (~> 4.1)
+  coffee-rails
   fullcalendar-rails
   jbuilder
   jquery-rails
