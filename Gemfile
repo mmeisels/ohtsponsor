@@ -44,6 +44,7 @@ group :production do
 end
 
 gem 'fullcalendar-rails'
+ruby "2.5.1"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
